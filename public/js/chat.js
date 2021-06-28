@@ -2,7 +2,7 @@ let usuario = null;
 let socket = null;
 const url = (window.location.hostname.includes('localhost'))
     ? 'http://localhost:8080/api/auth/'
-    : 'https://nodejs-restserverapp.herokuapp.com/api/auth/';
+    : 'https://rest-socketchat.herokuapp.com/api/auth/';
 
 const txtUid = document.getElementById('txtUid');
 const txtMensaje = document.getElementById('txtMensaje');
