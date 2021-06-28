@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <meta name="google-signin-client_id"
+        content="1049811659955-asem2gf9354r13pjiili9hgalgejd70m.apps.googleusercontent.com">
+    <link href="css/pages/chat-app-page.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/chat.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- You can change the theme colors from here -->
+    <link href="css/colors/default-dark.css" id="theme" rel="stylesheet">
+    <style>
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body class="fix-header single-column card-no-border fix-sidebar">
+    <div id="main-wrapper">
+        <div class="page-wrapper">
+            <div class="container-fluid">
+                <div class="row animated fadeIn">
+                    <div class="col-12">
+                        <div class="card m-b-0">
+                            <div class="chat-main-box">
+                                <div class="chat-left-aside">
+                                    <div class="open-panel"><i class="ti-angle-right"></i></div>
+                                    <div class="chat-left-inner">
+                                        <div class="form-material">
+                                            <input class="form-control p-20" type="text" placeholder="Buscar Contacto"
+                                                id="txtContactos" autocomplete="off">
+                                            <input type="text" id="txtUid" class="form-control p-20" placeholder="uid"
+                                                autocomplete="off" style="display: none;" />
+                                        </div>
+                                        <ul class="chatonline style-none" id="divUsuarios">
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="chat-right-aside">
+                                    <div class="chat-main-header">
+                                        <div class="p-20 b-b">
+                                            <h3 class="box-title">Sala de chat <small></small></h3>
+                                        </div>
+                                    </div>
+                                    <div class="chat-rbox">
+                                        <ul class="chat-list p-20" id="divChatbox">
+                                        </ul>
+                                    </div>
+                                    <div class="card-body b-t">
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <textarea placeholder="Escribe tu mensaje aquí" id="txtMensaje"
+                                                    class="form-control b-0" autocomplete="off"></textarea>
+                                            </div>
+                                            <div class="col-4 text-right">
+                                                <button type="button" class="btn btn-info btn-circle btn-lg"
+                                                    id="btnEnviar">
+                                                    <i class="fa fa-paper-plane-o"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+                <button id="btnSalir" class="btn btn-outline-danger">
+                    Logout
+                </button>
+            </footer>
+        </div>
+    </div>
+    <script src="js/libs/jquery.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js"></script>
+    <script src="./socket.io/socket.io.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+
+</html>
